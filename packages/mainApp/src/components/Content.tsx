@@ -8,6 +8,10 @@ const LazyAdvice = lazy(() => import("./Advice"));
 export const Content: FC = () => {
   const { addPopup } = usePopups();
 
+  /**
+   * Adds a popup with a random advice
+   * @returns {void}
+   */
   const addPopupA = async () => {
     addPopup({
       id: "popupA-" + Date.now(),
@@ -21,6 +25,10 @@ export const Content: FC = () => {
     });
   };
 
+  /**
+   * Adds a popup with a random image
+   * @returns {void}
+   */
   const addPopupB = () => {
     const randomImage = `https://picsum.photos/200/150?random=${Date.now()}`;
 

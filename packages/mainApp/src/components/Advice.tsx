@@ -7,6 +7,11 @@ const Advice: FC = () => {
   const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
+    /**
+     * Fetches a random advice from the AdviceSlip API.
+     * Updates component state with the advice and sets loading to false.
+     * If the request fails, logs the error to the console.
+     */
     const loadAdvice = async () => {
       try {
         const adviceData = await fetchAdvice();
