@@ -1,0 +1,30 @@
+name: CI for Components Library
+
+on:
+  push:
+    branches:
+      - "**"
+
+jobs:
+  test-popup-provider:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+
+      - name: Install root dependencies
+        run: npm install
+
+      - name: Install package dependencies for popup-provider
+        working-directory: packages/popupProvider
+        run: npm install
+
+      - name: Run tests for popup-provider
+        working-directory: packages/popupProvider
+        run: npm test

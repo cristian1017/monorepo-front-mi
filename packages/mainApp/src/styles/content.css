@@ -1,0 +1,13 @@
+.content-container {
+  margin: 20px;
+  box-sizing: border-box;
+  height: 85vh; 
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 12px;
+  padding: 30px;
+}
+
+.button-container-add {
+  display: flex;
+  gap: 1rem;
+}

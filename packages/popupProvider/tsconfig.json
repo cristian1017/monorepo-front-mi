@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/types",
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "module": "ESNext",
+    "target": "ES2022",
+    "lib": ["dom", "esnext", "ES2023"],
+    "jsx": "react-jsx",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "moduleResolution": "node"
+  },
+  "include": ["src/**/*"]
+}
